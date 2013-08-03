@@ -3,16 +3,16 @@
 
 #define BLINKDELAY 5
 #define SYSTEMCODE 31
-#define TRANSMITTER P1_4
-#define RECEIVER P1_3
+#define TRANSMITTER P1_5
+#define RECEIVER P1_4
 
 ElroTransmitter elroTransmitter(TRANSMITTER);
 BlokkerTransmitter blokkerTransmitter(TRANSMITTER);
 ActionTransmitter actionTransmitter(TRANSMITTER);
 
 //display help
-String inputString = "h";  
-boolean stringComplete = true;
+String inputString = "";  
+boolean stringComplete = false;
 
 
 void p(String input){
