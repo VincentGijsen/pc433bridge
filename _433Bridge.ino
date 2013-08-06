@@ -206,6 +206,10 @@ void processStringComplete()
          device = inputString[2];
          onOf = inputString[3] == 1? true : false;
          elroTransmitter.sendSignal(address, device, onOf);
+         Serial.print("oke");
+         Serial.print(address, DEC);
+         Serial.print(device);
+         Serial.println(onOf, DEC);
          break;  
        
        case 'k':
@@ -230,7 +234,6 @@ void processStringComplete()
     p("ok");
      //Clear state of the input and re-enable receiver
     inputString = ""; 
-    stringComplete = false;
 }
   
 void translateCode(unsigned long receivedCode, unsigned int period){
